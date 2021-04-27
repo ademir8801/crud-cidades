@@ -25,12 +25,11 @@
         </#if>
             <div class="form-group">
                 <label for="nome">Cidade:</label>
-                <input value="${(cidadeAtual.nome)!}" name="nome" type="text" class="form-control" placeholder="Informe o nome da cidade" id="nome">
+                <input required value="${(cidadeAtual.nome)!}" name="nome" type="text" class="form-control" placeholder="Informe o nome da cidade" id="nome">
             </div>
             <div class="form-group">
                 <label for="estado">Estado:</label>
-                <input value="${(cidadeAtual.estado)!}" name="estado"type="text" class="form-control" placeholder="Informe o estado ao qual a cidade pertence"
-                    id="estado">
+                <input maxlength="2" required value="${(cidadeAtual.estado)!}" name="estado"type="text" class="form-control" placeholder="Informe o estado ao qual a cidade pertence" id="estado">
             </div>
             <#if cidadeAtual??>
             <button type="submit" class="btn btn-warning">CONCLUIR ALTERAÇÃO</button>
