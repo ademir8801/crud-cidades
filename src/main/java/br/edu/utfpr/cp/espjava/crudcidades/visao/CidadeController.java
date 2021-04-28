@@ -42,6 +42,8 @@ public class CidadeController {
                         )
                 );
 
+                memoria.addAttribute("nomeInformado", cidade.getNome());
+                memoria.addAttribute("nomeInformado", cidade.getEstado());
                 memoria.addAttribute("listaCidades", cidades);
 
                 return ("/crud");
@@ -84,13 +86,15 @@ public class CidadeController {
     public String alterar(
         @RequestParam String nomeAtual,
         @RequestParam String estadoAtual,
-        Cidade cidade) {
+        Cidade cidade,
+        BindingResult validacao,
+        Model memoria) {
 
             cidades.removeIf(cidadeAtual ->
                 cidadeAtual.getNome().equals(nomeAtual) &&
                 cidadeAtual.getEstado().equals(estadoAtual));
             
-            criar(cidade, null, null);
+            criar(cidade, validacao, memoria);
 
             return "redirect:/";
         }
