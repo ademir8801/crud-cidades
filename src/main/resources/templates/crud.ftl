@@ -51,7 +51,7 @@
             <#if cidadeAtual??>
             <button type="submit" class="btn btn-warning">CONCLUIR ALTERAÇÃO</button>
             <#else>
-            <button type="sunmit" class="btn btn-primary">CRIAR</button>
+            <button type="submit" class="btn btn-primary">CRIAR</button>
             </#if>
         </form>
         <table class="table table-striped table-hover mt-5">
