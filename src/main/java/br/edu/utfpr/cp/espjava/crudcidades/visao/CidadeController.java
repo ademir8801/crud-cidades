@@ -43,7 +43,7 @@ public class CidadeController {
                 );
 
                 memoria.addAttribute("nomeInformado", cidade.getNome());
-                memoria.addAttribute("nomeInformado", cidade.getEstado());
+                memoria.addAttribute("estadoInformado", cidade.getEstado());
                 memoria.addAttribute("listaCidades", cidades);
 
                 return ("/crud");
