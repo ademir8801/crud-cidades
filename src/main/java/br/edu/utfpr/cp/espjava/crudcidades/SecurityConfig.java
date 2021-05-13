@@ -14,7 +14,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+        auth.inMemoryAuthentication()
+                    .withUser("john")
+                    .password(cifrador().encode("test123"))
+                    .authorities("listar")
+                        .and()
+                    .withUser("anna")
+                    .password(cifrador().encode("test123"))
+                    .authorities("admin");
     }
 
     @Bean
