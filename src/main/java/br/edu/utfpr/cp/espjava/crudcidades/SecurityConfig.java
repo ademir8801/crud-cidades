@@ -14,18 +14,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
-    
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                    .withUser("john")
-                    .password(cifrador().encode("test123"))
-                    .authorities("listar")
-                        .and()
-                    .withUser("anna")
-                    .password(cifrador().encode("test123"))
-                    .authorities("admin");
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
