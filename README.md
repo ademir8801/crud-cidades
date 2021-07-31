@@ -12,5 +12,5 @@ mvn spring-boot:run
 ```
 Utilize o endereço abaixo para visualizar o projeto.
 ```bash
-https://localhost:8080
+https://localhost:8080/crud
 ```
